@@ -1,18 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
-@app.route('/order', methods=['POST'])
-def order():
-    name = request.form.get('name')
-    phone = request.form.get('phone')
-    product = request.form.get('product')
-    return f'Спасибо, {name}! Ваш заказ ({product}) принят. Мы свяжемся с вами по номеру {phone}.'
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000, debug=True)
 
-if __name__ == '__main__':
-    app.run(debug=True)
- 
