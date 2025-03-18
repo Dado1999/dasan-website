@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASAN - Доставка товаров из Китая</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Добро пожаловать в DASAN</h1>
+    <p>Мы занимаемся доставкой товаров из Китая и продажей на маркетплейсах.</p>
+
+    <h2>Оформите заказ</h2>
+    <form action="/order" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" required><br>
+        <input type="text" name="phone" placeholder="Ваш телефон" required><br>
+        <input type="text" name="product" placeholder="Название товара" required><br>
+        <button type="submit">Отправить заявку</button>
+    </form>
+
+    <footer>
+        <p>📞 Телефон и WhatsApp: <a href="tel:+77000970077">+7 700 097 00 77</a></p>
+    </footer>
+
+</body>
+</html>
+
+ 
